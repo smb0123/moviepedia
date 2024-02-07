@@ -25,7 +25,7 @@ function App() {
     if (options.offset === 0) {
       setItems(reviews);
     } else {
-      setItems([...items, ...reviews]);
+      setItems((preItems) => [...preItems, ...reviews]);
     }
     setOffset(options.offset + options.limit);
     setHasNext(paging.hasNext);
